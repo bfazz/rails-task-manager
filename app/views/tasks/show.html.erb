@@ -4,3 +4,7 @@
 <p> Completed: <%= @task.completed %></p>
 
 <%= link_to "Edit Task", edit_task_path %>
+
+<%= link_to "Delete Task", task_path(@task), data: {turbo_method: 'delete', turbo_confirm: 'r u sure?'} %>
+
+<%= link_to "Back to Task", tasks_path %>
